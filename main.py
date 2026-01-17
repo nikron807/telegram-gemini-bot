@@ -1,13 +1,11 @@
 import telebot
 import google.generativeai as genai
 import os
-import requests
 
-os.environ['HTTP_PROXY'] = os.getenv('HTTP_PROXY', '')
 os.environ['HTTPS_PROXY'] = os.getenv('HTTPS_PROXY', '')
 
-TG_TOKEN = os.getenv("8478495663:AAFNrD16EMR4j6lcVUZwRChmFQ7kzdDOYKo")
-GEMINI_KEY = os.getenv("AIzaSyCAz9ucF5TXFks8y6ZS6H_LvFh6gNERL2I")
+TG_TOKEN = os.getenv("TG_TOKEN")
+GEMINI_KEY = os.getenv("GEMINI_KEY")
 
 bot = telebot.TeleBot(TG_TOKEN)
 genai.configure(api_key=GEMINI_KEY)
