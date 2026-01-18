@@ -2,7 +2,7 @@ import requests
 import telebot
 
 # ВРЕМЕННО ВСТАВЛЯЕШЬ КЛЮЧИ ПРЯМО В КОД (только для теста!)
-TG_TOKEN = "8478495633:AAFNrD16EMR4j6lcVUZwRChmFQ7kzdDOYKo"
+TG_TOKEN = "8478495663:AAFyB2_HSQK0EwApJvCyxFMYWcBys0sXtKE"
 API_KEY = "AQVN2mV0QKURgqpm-SAo0uP6wIap6VuKU3VMvE3g"  # ТОТ ЧТО ТЫ СОЗДАЛ
 FOLDER_ID = "b1gsj5o72kg4m5rtd69f"
 
