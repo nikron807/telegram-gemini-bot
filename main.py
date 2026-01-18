@@ -1,10 +1,10 @@
-import os
 import requests
 import telebot
 
-API_KEY = os.getenv("AQVN2mV0QKURgqpm-SAo0uP6wIap6VuKU3VMvE3g")
-TG_TOKEN = os.getenv("AIzaSyCAz9ucF5TXFks8y6ZS6H_LvFh6gNERL2I")
-FOLDER_ID = os.getenv("b1gsj5o72kg4m5rtd69f")
+# ВРЕМЕННО ВСТАВЛЯЕШЬ КЛЮЧИ ПРЯМО В КОД (только для теста!)
+TG_TOKEN = "8478495633:AAFNrD16EMR4j6lcVUZwRChmFQ7kzdDOYKo"
+API_KEY = "AQVN2mV0QKURgqpm-SAo0uP6wIap6VuKU3VMvE3g"  # ТОТ ЧТО ТЫ СОЗДАЛ
+FOLDER_ID = "b1gsj5o72kg4m5rtd69f"
 
 bot = telebot.TeleBot(TG_TOKEN)
 
