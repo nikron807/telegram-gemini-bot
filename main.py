@@ -1,13 +1,19 @@
 import os
-from dotenv import load_dotenv
 import requests
 import telebot
 
-load_dotenv()
-
+# Railway передаёт переменные прямо в окружение
 API_KEY = os.getenv("AQVN2mV0QKURgqpm-SAo0uP6wIap6VuKU3VMvE3g")
 TG_TOKEN = os.getenv("AIzaSyCAz9ucF5TXFks8y6ZS6H_LvFh6gNERL2I")
 FOLDER_ID = os.getenv("b1gsj5o72kg4m5rtd69f")
+# Отладка - проверим что получилось
+print(f"TG_TOKEN: {TG_TOKEN}")
+print(f"API_KEY: {API_KEY}")
+print(f"FOLDER_ID: {FOLDER_ID}")
+
+if not TG_TOKEN:
+    print("ОШИБКА: TG_TOKEN пуст!")
+    exit(1)
 
 bot = telebot.TeleBot(TG_TOKEN)
 
@@ -26,7 +32,7 @@ def ask_yandex_gpt(text):
     try:
         return response.json()['result']['alternatives'][0]['message']['text']
     except:
-        return "Ошибка запроса"
+        return "Ошибка запроса к AI"
 
 @bot.message_handler(func=lambda m: True)
 def reply(message):
